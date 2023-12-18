@@ -12,7 +12,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
-public class AfetrLoginJ {
+public class AfterFinishJ {
 
     @FXML
     private ResourceBundle resources;
@@ -30,9 +30,6 @@ public class AfetrLoginJ {
     private Button home;
 
     @FXML
-    private Button lets;
-
-    @FXML
     private Button setting;
 
     @FXML
@@ -40,36 +37,15 @@ public class AfetrLoginJ {
 
     @FXML
     private Button types;
+
     private Stage stage1;
     Parent root;
 
     @FXML
-    void initialize()  {
-        lets.setOnAction(event ->{
-            try {
-                root= FXMLLoader.load(getClass().getResource("Questions1.fxml"));
-            } catch (IOException e) {
-                throw new RuntimeException(e);
-            }
-            stage1 = (Stage)((Node)event.getSource()).getScene().getWindow();
-            Scene scene = new Scene(root);
-            stage1.setScene(scene);
-            stage1.show();
-        } );
+    void initialize() {
         home.setOnAction(event ->{
             try {
                 root= FXMLLoader.load(getClass().getResource("Home.fxml"));
-            } catch (IOException e) {
-                throw new RuntimeException(e);
-            }
-            stage1 = (Stage)((Node)event.getSource()).getScene().getWindow();
-            Scene scene = new Scene(root);
-            stage1.setScene(scene);
-            stage1.show();
-        });
-        takeTest.setOnAction(event ->{
-            try {
-                root= FXMLLoader.load(getClass().getResource("Questions1.fxml"));
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }
@@ -100,6 +76,17 @@ public class AfetrLoginJ {
             stage1.setScene(scene);
             stage1.show();
         } );
+        takeTest.setOnAction(event ->{
+            try {
+                root= FXMLLoader.load(getClass().getResource("AfterLog.fxml"));
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+            stage1 = (Stage)((Node)event.getSource()).getScene().getWindow();
+            Scene scene = new Scene(root);
+            stage1.setScene(scene);
+            stage1.show();
+        } );
     }
-
 }
+
