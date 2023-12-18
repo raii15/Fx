@@ -9,10 +9,12 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
-public class AfetrLoginJ {
+public class HomeJ {
 
     @FXML
     private ResourceBundle resources;
@@ -21,7 +23,25 @@ public class AfetrLoginJ {
     private URL location;
 
     @FXML
+    private TextArea CircleText;
+
+    @FXML
+    private Label Intj1;
+
+    @FXML
+    private Button activ;
+
+    @FXML
+    private TextArea aresText;
+
+    @FXML
+    private Button books;
+
+    @FXML
     private TextField email;
+
+    @FXML
+    private Button events;
 
     @FXML
     private Button help;
@@ -30,7 +50,13 @@ public class AfetrLoginJ {
     private Button home;
 
     @FXML
-    private Button lets;
+    private Label intj2;
+
+    @FXML
+    private Label intj3;
+
+    @FXML
+    private Label intj4;
 
     @FXML
     private Button setting;
@@ -40,36 +66,15 @@ public class AfetrLoginJ {
 
     @FXML
     private Button types;
+
     private Stage stage1;
     Parent root;
 
     @FXML
     void initialize()  {
-        lets.setOnAction(event ->{
-            try {
-                root= FXMLLoader.load(getClass().getResource("Questions1.fxml"));
-            } catch (IOException e) {
-                throw new RuntimeException(e);
-            }
-            stage1 = (Stage)((Node)event.getSource()).getScene().getWindow();
-            Scene scene = new Scene(root);
-            stage1.setScene(scene);
-            stage1.show();
-        } );
-        home.setOnAction(event ->{
-            try {
-                root= FXMLLoader.load(getClass().getResource("Home.fxml"));
-            } catch (IOException e) {
-                throw new RuntimeException(e);
-            }
-            stage1 = (Stage)((Node)event.getSource()).getScene().getWindow();
-            Scene scene = new Scene(root);
-            stage1.setScene(scene);
-            stage1.show();
-        });
         takeTest.setOnAction(event ->{
             try {
-                root= FXMLLoader.load(getClass().getResource("Questions1.fxml"));
+                root= FXMLLoader.load(getClass().getResource("AfterLog.fxml"));
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }
@@ -91,7 +96,7 @@ public class AfetrLoginJ {
         } );
         types.setOnAction(event ->{
             try {
-                root= FXMLLoader.load(getClass().getResource("PersTypes.fxml"));
+                root= FXMLLoader.load(getClass().getResource("Questions1.fxml"));
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }
@@ -103,3 +108,4 @@ public class AfetrLoginJ {
     }
 
 }
+

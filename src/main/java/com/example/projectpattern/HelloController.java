@@ -10,22 +10,17 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.CheckBox;
-import javafx.scene.control.PasswordField;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
+import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 
 public class HelloController {
 
     @FXML
-    private ResourceBundle resources;
+    private Hyperlink forgotpass;
 
     @FXML
-    private URL location;
-
-    @FXML
-    private Button forgotBut;
+    private ImageView image;
 
     @FXML
     private Button loginBut;
@@ -57,7 +52,17 @@ public class HelloController {
             stage1.setScene(scene);
             stage1.show();
         } );
-
+        loginBut.setOnAction(event ->{
+            try {
+                root= FXMLLoader.load(getClass().getResource("AfterLog.fxml"));
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+            stage1 = (Stage)((Node)event.getSource()).getScene().getWindow();
+            Scene scene = new Scene(root);
+            stage1.setScene(scene);
+            stage1.show();
+        } );
     }
 
 }

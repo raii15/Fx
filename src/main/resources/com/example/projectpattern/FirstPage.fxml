@@ -24,11 +24,11 @@
          <font>
             <Font name="System Bold" size="56.0" />
          </font></Label>
-        <Button fx:id="lets" layoutX="74.0" layoutY="606.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="263.0" style="-fx-background-radius: 10; -fx-background-color: #5FB4B7;" text="Let's do it" textFill="#fcf5f5">
+        <Button fx:id="lets" layoutX="74.0" layoutY="606.0" mnemonicParsing="false" prefHeight="59.0" prefWidth="264.0" style="-fx-background-radius: 15; -fx-background-color: #5FB4B7;" text="Let's do it" textFill="#fcf5f5">
          <font>
             <Font size="28.0" />
          </font></Button>
-      <Button fx:id="LoginButF" layoutX="1333.0" layoutY="29.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="130.0" style="-fx-background-radius: 10; -fx-background-color: #5FB4B7;" text="Login" textFill="#282525">
+      <Button fx:id="LoginButF" layoutX="1333.0" layoutY="29.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="130.0" style="-fx-background-radius: 10; -fx-background-color: #5FB4B7;" text="Login" textFill="#ece5e5">
          <font>
             <Font size="16.0" />
          </font></Button>
